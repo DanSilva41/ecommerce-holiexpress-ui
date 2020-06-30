@@ -1,0 +1,25 @@
+<!-- Main Navigation-->
+<nav class="site-menu">
+    <ul>
+        <li routerLinkActive="active">
+            <a routerLink="/home" href="">
+                <span>Home</span>
+            </a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/presentes" href="">
+                <span>Lista de Presentes</span>
+            </a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/lista-presentes" href="">
+                <span>Meus Presentes</span>
+            </a>
+        </li>
+        <li *ngIf="user && user?.roles?.admin" routerLinkActive="active">
+            <a routerLink="/admin/add" href="">
+                <span>Adicionar Presente</span>
+            </a>
+        </li>
+    </ul>
+</nav>
